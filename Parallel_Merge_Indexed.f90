@@ -9,7 +9,7 @@ module Parallel_Merge_Indexed
 
     private
 
-    public :: Parallel_Merge_Sort_Indexed, Merge_Sort_Indexed 
+    public :: Parallel_Merge_Sort_Indexed
 
     contains
 
