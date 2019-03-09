@@ -4,7 +4,7 @@ OpenMP + MPI implementations of the classic merge sort algorithm, written in For
  ## Overview ##
 An array distributed across an MPI communicator is first merged sorted locally. Those segments are then gathered and merged at the root note. MPI handles the partitioning of each array while openMP is used to parallelize the sort at the individual node level using the OpenMP 'task' construct. This approach is most ideal when developing for an OpenMP + MPI hybrid environment whereby each MPI node constitutes a separate CPU socket. </P>
 
-Parallel_Merge_Indexed.mod sorts a secondary integer array the primary array re-ordering. This is intended for users who wish to keep track of the initial array indices. 
+Parallel_Merge_Indexed.mod sorts a secondary integer array as per the primary array re-ordering. This is intended for users who wish to keep track of the initial array indices. 
 
 ## Build Instructions ##
 Parallel_Merge_Sort was developed using Intel compilers. Though, to the best of my knowledge, no Intel specific functionality has been used. To compile the module files and Example.f90 simply type 'mpiifort -fopenmp Parallel_Merge.f90 Parallel_Merge_Sort.f90 Example.f90 -o Example' into your terminal of choice.
